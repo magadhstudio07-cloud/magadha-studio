@@ -1,34 +1,38 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { ArrowUpRight } from "lucide-react";
 
 const Header = () => {
   return (
     <motion.header
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border"
+      className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border"
     >
-      <div className="container flex items-center justify-between h-16">
-        <a href="/" className="text-lg font-semibold tracking-tight text-foreground">
-          magadh<span className="text-primary">.studio</span>
+      <div className="container flex items-center justify-between h-14">
+        <a href="/" className="text-sm font-bold tracking-[0.2em] uppercase">
+          MAGADH<span className="font-normal tracking-normal ml-1 text-muted-foreground">STUDIO</span>
         </a>
         
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <a href="#work" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
+            Case Studies
+          </a>
+          <a href="#services" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
             Services
           </a>
-          <a href="#work" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-            Work
-          </a>
-          <a href="#process" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-            Process
+          <a href="#process" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
+            Blog
           </a>
         </nav>
 
-        <Button size="sm" className="font-medium bg-primary text-primary-foreground hover:bg-primary/90 glow-sm">
-          Start a project
-        </Button>
+        <a 
+          href="#contact"
+          className="flex items-center gap-2 text-sm font-medium hover:opacity-70 transition-opacity"
+        >
+          Get in touch
+          <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
+        </a>
       </div>
     </motion.header>
   );

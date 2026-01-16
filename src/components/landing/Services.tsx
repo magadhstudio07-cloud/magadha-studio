@@ -1,55 +1,46 @@
 import { motion } from "framer-motion";
-import { Code, Layers, Plug, Gauge, Wrench } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const services = [
   {
-    icon: Code,
+    letter: "F",
     title: "Frontend Development",
-    description: "Modern React & Next.js applications built with performance and scalability in mind.",
+    description: "From the latest in React Server Components to tried and tested patterns that help you scale your website, we don't do half measures.",
   },
   {
-    icon: Layers,
+    letter: "U",
     title: "UI Implementation",
-    description: "Pixel-perfect translation of designs into responsive, accessible interfaces.",
+    description: "Pixel-perfect translation of designs into responsive, accessible interfaces that perform beautifully on every device.",
   },
   {
-    icon: Plug,
+    letter: "A",
     title: "API Integration",
-    description: "Seamless connection to backends, third-party services, and data sources.",
+    description: "Seamless connection to backends, third-party services, and data sources with robust error handling and caching.",
   },
   {
-    icon: Gauge,
+    letter: "P",
     title: "Performance Optimization",
-    description: "Core Web Vitals improvements, bundle optimization, and speed enhancements.",
-  },
-  {
-    icon: Wrench,
-    title: "Maintenance & Support",
-    description: "Ongoing updates, bug fixes, and technical support for your applications.",
+    description: "Core Web Vitals improvements, bundle optimization, and speed enhancements that directly impact your bottom line.",
   },
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 md:py-32">
+    <section id="services" className="py-24 md:py-32 border-t border-border grid-bg">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="max-w-xl mb-16"
+          className="mb-16"
         >
-          <span className="text-primary text-sm font-medium uppercase tracking-wider">Services</span>
-          <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
-            What we do
+          <h2 className="text-3xl md:text-4xl font-medium tracking-tight uppercase">
+            Our Services
           </h2>
-          <p className="mt-4 text-muted-foreground text-lg">
-            End-to-end frontend services for modern web products.
-          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 gap-px bg-border">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -57,15 +48,26 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group p-6 rounded-xl border border-border bg-card/50 hover:bg-card hover:border-primary/30 transition-all duration-300"
+              className="group bg-background p-8 md:p-12 hover:bg-secondary/50 transition-colors cursor-pointer"
             >
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <service.icon className="h-5 w-5 text-primary" />
+              <div className="flex items-start gap-6">
+                <span className="text-[120px] md:text-[160px] font-light leading-none text-border group-hover:text-muted-foreground/30 transition-colors">
+                  {service.letter}
+                </span>
+                <div className="pt-8">
+                  <h3 className="text-lg font-medium mb-3">{service.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                    {service.description}
+                  </p>
+                  <a 
+                    href="#contact" 
+                    className="inline-flex items-center gap-2 text-sm text-accent hover:underline"
+                  >
+                    View service
+                    <ArrowRight className="h-3 w-3" />
+                  </a>
+                </div>
               </div>
-              <h3 className="text-lg font-medium mb-2">{service.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
             </motion.div>
           ))}
         </div>
