@@ -22,7 +22,7 @@ const reasons = [
 
 const WhyUs = () => {
   return (
-    <section className="py-24 md:py-32 bg-secondary/50">
+    <section className="py-24 md:py-32 bg-card/30">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <motion.div
@@ -31,8 +31,9 @@ const WhyUs = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-              Why mm.studio
+            <span className="text-primary text-sm font-medium uppercase tracking-wider">Why us</span>
+            <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
+              Why magadh.studio
             </h2>
             <p className="mt-4 text-muted-foreground text-lg max-w-md">
               We focus on what matters: building products that work beautifully and perform exceptionally.
@@ -49,8 +50,8 @@ const WhyUs = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex gap-4"
               >
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center">
-                  <Check className="h-3 w-3 text-primary-foreground" />
+                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
+                  <Check className="h-3.5 w-3.5 text-primary" />
                 </div>
                 <div>
                   <h3 className="font-medium mb-1">{reason.title}</h3>

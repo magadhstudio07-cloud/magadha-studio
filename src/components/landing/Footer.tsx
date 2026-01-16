@@ -7,13 +7,13 @@ const Footer = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="py-16 border-t border-divider"
+      className="py-16 border-t border-border"
     >
       <div className="container">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-2">
-            <a href="/" className="text-xl font-semibold tracking-tight">
-              mm.studio
+            <a href="/" className="text-lg font-semibold tracking-tight">
+              magadh<span className="text-primary">.studio</span>
             </a>
             <p className="mt-4 text-sm text-muted-foreground max-w-sm leading-relaxed">
               A frontend studio that builds fast, scalable, and user-focused 
@@ -24,10 +24,10 @@ const Footer = () => {
           <div>
             <h4 className="text-sm font-medium mb-4">Contact</h4>
             <a
-              href="mailto:hello@mm.studio"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              href="mailto:hello@magadh.studio"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              hello@mm.studio
+              hello@magadh.studio
             </a>
           </div>
 
@@ -36,19 +36,19 @@ const Footer = () => {
             <div className="flex flex-col gap-2">
               <a
                 href="#"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 Twitter
               </a>
               <a
                 href="#"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 LinkedIn
               </a>
               <a
                 href="#"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 GitHub
               </a>
@@ -56,15 +56,15 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-divider flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-16 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} mm.studio. All rights reserved.
+            © {new Date().getFullYear()} magadh.studio. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#" className="text-xs text-muted-foreground hover:text-primary transition-colors">
               Privacy
             </a>
-            <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#" className="text-xs text-muted-foreground hover:text-primary transition-colors">
               Terms
             </a>
           </div>

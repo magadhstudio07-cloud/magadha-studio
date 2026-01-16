@@ -2,104 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
-/* mm.studio Design System - Premium Minimal */
+/* magadh.studio Design System - Tailwind-inspired Dark Theme */
 
 @layer base {
   :root {
-    /* Core palette - Light mode */
+    /* Light mode fallback */
     --background: 0 0% 98%;
-    --foreground: 0 0% 5%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 5%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 5%;
+    --popover-foreground: 222 47% 11%;
 
-    /* Primary - Deep charcoal for strong CTAs */
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 222 47% 11%;
 
-    /* Secondary - Soft neutral */
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 9%;
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 210 40% 98%;
 
-    /* Muted surfaces */
-    --muted: 0 0% 94%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 215 28% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    /* Accent - Subtle blue-slate */
-    --accent: 215 20% 65%;
-    --accent-foreground: 0 0% 9%;
+    --accent: 199 89% 48%;
+    --accent-foreground: 222 47% 11%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 9%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 199 89% 48%;
 
     --radius: 0.5rem;
 
     /* Custom tokens */
-    --surface-elevated: 0 0% 100%;
-    --text-subtle: 0 0% 55%;
-    --text-muted: 0 0% 40%;
-    --divider: 0 0% 92%;
+    --surface-elevated: 222 47% 11%;
+    --text-subtle: 215 20% 65%;
+    --divider: 217 33% 17%;
+    --glow: 199 89% 48%;
     
-    /* Sidebar */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 40%;
-    --sidebar-primary: 0 0% 9%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 0 0% 96%;
-    --sidebar-accent-foreground: 0 0% 9%;
-    --sidebar-border: 0 0% 92%;
-    --sidebar-ring: 0 0% 9%;
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 215 20% 65%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 199 89% 48%;
   }
 
-  .dark {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 95%;
+  .dark, :root {
+    /* Dark theme as default - Tailwind inspired */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
+    --card: 217 33% 17%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 217 33% 17%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
+    /* Primary - Cyan/Sky blue like Tailwind */
+    --primary: 199 89% 48%;
+    --primary-foreground: 222 47% 11%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 95%;
+    /* Secondary */
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    /* Muted */
+    --muted: 215 28% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 215 15% 45%;
-    --accent-foreground: 0 0% 95%;
+    /* Accent - matching primary */
+    --accent: 199 89% 48%;
+    --accent-foreground: 222 47% 11%;
 
     --destructive: 0 62% 30%;
-    --destructive-foreground: 0 0% 95%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 0 0% 85%;
+    --border: 217 33% 20%;
+    --input: 217 33% 17%;
+    --ring: 199 89% 48%;
 
-    --surface-elevated: 0 0% 10%;
-    --text-subtle: 0 0% 50%;
-    --text-muted: 0 0% 60%;
-    --divider: 0 0% 15%;
+    --surface-elevated: 217 33% 15%;
+    --text-subtle: 215 20% 55%;
+    --divider: 217 33% 20%;
+    --glow: 199 89% 48%;
 
-    --sidebar-background: 0 0% 8%;
-    --sidebar-foreground: 0 0% 60%;
-    --sidebar-primary: 0 0% 98%;
-    --sidebar-primary-foreground: 0 0% 9%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 0 0% 85%;
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 215 20% 65%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 199 89% 48%;
   }
 }
 
@@ -121,5 +121,17 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-sky-400 to-primary bg-clip-text text-transparent;
+  }
+
+  .glow {
+    box-shadow: 0 0 40px -10px hsl(var(--primary) / 0.5);
+  }
+
+  .glow-sm {
+    box-shadow: 0 0 20px -5px hsl(var(--primary) / 0.4);
   }
 }

@@ -25,7 +25,7 @@ const steps = [
 
 const Process = () => {
   return (
-    <section id="process" className="py-24 md:py-32 bg-secondary/50">
+    <section id="process" className="py-24 md:py-32 bg-card/30">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,8 @@ const Process = () => {
           transition={{ duration: 0.5 }}
           className="max-w-xl mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+          <span className="text-primary text-sm font-medium uppercase tracking-wider">Process</span>
+          <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
             How we work
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
@@ -52,7 +53,7 @@ const Process = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative"
             >
-              <span className="text-sm font-medium text-muted-foreground">
+              <span className="text-4xl font-bold text-primary/20">
                 {step.number}
               </span>
               <h3 className="mt-2 text-xl font-medium">{step.title}</h3>
