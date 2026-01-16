@@ -40,7 +40,8 @@ const Services = () => {
           transition={{ duration: 0.5 }}
           className="max-w-xl mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+          <span className="text-primary text-sm font-medium uppercase tracking-wider">Services</span>
+          <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
             What we do
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
@@ -48,7 +49,7 @@ const Services = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -56,9 +57,11 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group p-6 rounded-lg border border-divider hover:border-border hover:bg-card transition-all duration-300"
+              className="group p-6 rounded-xl border border-border bg-card/50 hover:bg-card hover:border-primary/30 transition-all duration-300"
             >
-              <service.icon className="h-5 w-5 text-muted-foreground mb-4" />
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <service.icon className="h-5 w-5 text-primary" />
+              </div>
               <h3 className="text-lg font-medium mb-2">{service.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {service.description}

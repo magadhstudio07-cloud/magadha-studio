@@ -10,7 +10,7 @@ const logos = [
 
 const TrustSection = () => {
   return (
-    <section className="py-16 border-t border-divider">
+    <section className="py-16 border-t border-border">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -26,7 +26,7 @@ const TrustSection = () => {
             {logos.map((logo) => (
               <div
                 key={logo.name}
-                className={`${logo.width} h-8 bg-muted rounded flex items-center justify-center`}
+                className={`${logo.width} h-8 bg-card border border-border rounded-md flex items-center justify-center`}
               >
                 <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
                   {logo.name}

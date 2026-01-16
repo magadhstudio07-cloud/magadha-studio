@@ -7,11 +7,11 @@ const Header = () => {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-divider"
+      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border"
     >
       <div className="container flex items-center justify-between h-16">
-        <a href="/" className="text-xl font-semibold tracking-tight">
-          mm.studio
+        <a href="/" className="text-lg font-semibold tracking-tight text-foreground">
+          magadh<span className="text-primary">.studio</span>
         </a>
         
         <nav className="hidden md:flex items-center gap-8">
@@ -26,7 +26,7 @@ const Header = () => {
           </a>
         </nav>
 
-        <Button size="sm" className="font-medium">
+        <Button size="sm" className="font-medium bg-primary text-primary-foreground hover:bg-primary/90 glow-sm">
           Start a project
         </Button>
       </div>

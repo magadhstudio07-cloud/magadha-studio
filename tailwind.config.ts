@@ -16,11 +16,19 @@ export default {
       fontFamily: {
         sans: [
           "Inter",
+          "ui-sans-serif",
+          "system-ui",
           "-apple-system",
           "BlinkMacSystemFont",
           "Segoe UI",
           "Roboto",
           "sans-serif",
+        ],
+        mono: [
+          "JetBrains Mono",
+          "Fira Code",
+          "ui-monospace",
+          "monospace",
         ],
       },
       colors: {
@@ -67,10 +75,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        "surface-elevated": "hsl(var(--surface-elevated))",
-        "text-subtle": "hsl(var(--text-subtle))",
-        "text-muted": "hsl(var(--text-muted))",
-        divider: "hsl(var(--divider))",
+        glow: "hsl(var(--glow))",
+        sky: {
+          400: "#38bdf8",
+          500: "#0ea5e9",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
