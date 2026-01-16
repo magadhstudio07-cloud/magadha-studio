@@ -1,0 +1,74 @@
+import { motion } from "framer-motion";
+import { Code, Layers, Plug, Gauge, Wrench } from "lucide-react";
+
+const services = [
+  {
+    icon: Code,
+    title: "Frontend Development",
+    description: "Modern React & Next.js applications built with performance and scalability in mind.",
+  },
+  {
+    icon: Layers,
+    title: "UI Implementation",
+    description: "Pixel-perfect translation of designs into responsive, accessible interfaces.",
+  },
+  {
+    icon: Plug,
+    title: "API Integration",
+    description: "Seamless connection to backends, third-party services, and data sources.",
+  },
+  {
+    icon: Gauge,
+    title: "Performance Optimization",
+    description: "Core Web Vitals improvements, bundle optimization, and speed enhancements.",
+  },
+  {
+    icon: Wrench,
+    title: "Maintenance & Support",
+    description: "Ongoing updates, bug fixes, and technical support for your applications.",
+  },
+];
+
+const Services = () => {
+  return (
+    <section id="services" className="py-24 md:py-32">
+      <div className="container">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="max-w-xl mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+            What we do
+          </h2>
+          <p className="mt-4 text-muted-foreground text-lg">
+            End-to-end frontend services for modern web products.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group p-6 rounded-lg border border-divider hover:border-border hover:bg-card transition-all duration-300"
+            >
+              <service.icon className="h-5 w-5 text-muted-foreground mb-4" />
+              <h3 className="text-lg font-medium mb-2">{service.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {service.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;
