@@ -1,46 +1,44 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
 
 const reasons = [
   {
     title: "Clean, scalable code",
-    description: "Well-structured, documented, and easy to maintain.",
+    description: "Well-structured, documented, and easy to maintain for years to come.",
   },
   {
     title: "Performance-first approach",
-    description: "Every decision optimized for speed and efficiency.",
+    description: "Every decision optimized for speed, efficiency, and core web vitals.",
   },
   {
     title: "Clear communication",
-    description: "Regular updates, honest timelines, no surprises.",
+    description: "Regular updates, honest timelines, and no surprises along the way.",
   },
   {
     title: "Reliable delivery",
-    description: "We ship on time, every time.",
+    description: "We ship on time, every time. Your deadlines are our deadlines.",
   },
 ];
 
 const WhyUs = () => {
   return (
-    <section className="py-24 md:py-32 bg-card/30">
+    <section className="py-24 md:py-32 border-t border-border">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <span className="text-primary text-sm font-medium uppercase tracking-wider">Why us</span>
-            <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
-              Why magadh.studio
+            <h2 className="text-3xl md:text-4xl font-medium tracking-tight uppercase">
+              Why Magadh.Studio
             </h2>
-            <p className="mt-4 text-muted-foreground text-lg max-w-md">
+            <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
               We focus on what matters: building products that work beautifully and perform exceptionally.
             </p>
           </motion.div>
 
-          <div className="grid gap-6">
+          <div className="grid gap-8">
             {reasons.map((reason, index) => (
               <motion.div
                 key={reason.title}
@@ -48,17 +46,12 @@ const WhyUs = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex gap-4"
+                className="border-l-2 border-foreground pl-6"
               >
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
-                  <Check className="h-3.5 w-3.5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-medium mb-1">{reason.title}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {reason.description}
-                  </p>
-                </div>
+                <h3 className="font-medium mb-2">{reason.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {reason.description}
+                </p>
               </motion.div>
             ))}
           </div>

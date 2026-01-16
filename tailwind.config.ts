@@ -9,7 +9,7 @@ export default {
       center: true,
       padding: "1.5rem",
       screens: {
-        "2xl": "1280px",
+        "2xl": "1400px",
       },
     },
     extend: {
@@ -19,16 +19,13 @@ export default {
           "ui-sans-serif",
           "system-ui",
           "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
           "sans-serif",
         ],
-        mono: [
-          "JetBrains Mono",
-          "Fira Code",
-          "ui-monospace",
-          "monospace",
+        display: [
+          "Inter",
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
         ],
       },
       colors: {
@@ -75,11 +72,7 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        glow: "hsl(var(--glow))",
-        sky: {
-          400: "#38bdf8",
-          500: "#0ea5e9",
-        },
+        grid: "hsl(var(--grid-color))",
       },
       borderRadius: {
         lg: "var(--radius)",
