@@ -30,15 +30,18 @@ const WhyUs = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-medium tracking-tight uppercase">
+            <span className="text-accent text-xs font-medium uppercase tracking-[0.3em]">
+              Why Us
+            </span>
+            <h2 className="mt-4 text-3xl md:text-4xl font-medium">
               Why Magadh.Studio
             </h2>
-            <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
+            <p className="mt-6 text-muted-foreground leading-relaxed">
               We focus on what matters: building products that work beautifully and perform exceptionally.
             </p>
           </motion.div>
 
-          <div className="grid gap-8">
+          <div className="grid gap-6">
             {reasons.map((reason, index) => (
               <motion.div
                 key={reason.title}
@@ -46,7 +49,7 @@ const WhyUs = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="border-l-2 border-foreground pl-6"
+                className="border-l-2 border-accent pl-6"
               >
                 <h3 className="font-medium mb-2">{reason.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
