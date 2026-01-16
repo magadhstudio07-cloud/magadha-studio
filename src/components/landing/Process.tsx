@@ -32,10 +32,13 @@ const Process = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-16"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-medium tracking-tight uppercase">
-            How We Work
+          <span className="text-accent text-xs font-medium uppercase tracking-[0.3em]">
+            Process
+          </span>
+          <h2 className="mt-4 text-3xl md:text-4xl font-medium">
+            How we work
           </h2>
         </motion.div>
 
@@ -52,7 +55,7 @@ const Process = () => {
               <span className="text-xs font-medium text-muted-foreground">
                 {step.number}
               </span>
-              <h3 className="mt-4 text-xl font-medium uppercase tracking-wide">{step.title}</h3>
+              <h3 className="mt-4 text-xl font-medium">{step.title}</h3>
               <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
                 {step.description}
               </p>

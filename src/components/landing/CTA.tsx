@@ -12,7 +12,10 @@ const CTA = () => {
           transition={{ duration: 0.5 }}
           className="max-w-3xl"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight uppercase leading-[1.1]">
+          <span className="text-accent text-xs font-medium uppercase tracking-[0.3em]">
+            Contact
+          </span>
+          <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1] uppercase">
             Ready to build something great?
           </h2>
           <p className="mt-6 text-muted-foreground text-lg">
