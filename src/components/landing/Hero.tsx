@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import GridBackground from "./GridBackground";
 
 const Hero = () => {
   return (
-    <section className="pt-14 min-h-screen flex items-center grid-bg relative">
-      <div className="container py-24 md:py-32">
+    <section className="pt-14 min-h-screen flex items-center relative">
+      <GridBackground />
+      <div className="container py-24 md:py-32 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

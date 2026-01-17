@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import GridBackground from "./GridBackground";
 
 const CTA = () => {
   return (
-    <section id="contact" className="py-24 md:py-32 border-t border-border grid-bg">
-      <div className="container">
+    <section id="contact" className="py-24 md:py-32 border-t border-border relative">
+      <GridBackground />
+      <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
