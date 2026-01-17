@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
 import Clients from "@/components/landing/Clients";
@@ -12,16 +11,6 @@ import Footer from "@/components/landing/Footer";
 import SEO from "@/components/SEO";
 
 const Index = () => {
-  // Set dark mode as default on mount
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (!savedTheme) {
-      document.documentElement.classList.add("dark");
-    } else if (savedTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
-
   return (
     <>
       <SEO />
