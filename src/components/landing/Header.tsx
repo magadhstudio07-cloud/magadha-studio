@@ -4,16 +4,16 @@ import ThemeToggle from "@/components/ThemeToggle";
 
 const Header = () => {
   return (
-    <>
-      <section className="container fixed top-0 left-0 right-0 z-50">
+    <motion.header
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="fixed top-0 left-0 right-0 z-50"
+    >
+      <section className="container bg-background/90 backdrop-blur-sm">
         <div className="border-x border-border relative h-4"></div>
       </section>
-      <motion.header
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border"
-      >
+      <div className="bg-background/90 backdrop-blur-sm border-b border-border">
         <div className="container flex items-center h-14">
           {/* Logo */}
           <a href="/" className="text-sm font-bold tracking-[0.2em] uppercase border-r border-border pr-6 mr-6">
@@ -45,8 +45,8 @@ const Header = () => {
             </a>
           </div>
         </div>
-      </motion.header>
-    </>
+      </div>
+    </motion.header>
   );
 };
 
