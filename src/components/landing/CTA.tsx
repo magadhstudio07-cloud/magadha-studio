@@ -1,47 +1,63 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import GridBackground from "./GridBackground";
+import ArrowIcon from "./ArrowIcon";
 
 const CTA = () => {
+  const handleScheduleCall = () => {
+    // Open Calendly popup
+    if ((window as any).Calendly) {
+      (window as any).Calendly.initPopupWidget({
+        url: 'https://calendly.com/your-calendly-link'
+      });
+    } else {
+      // Fallback to direct link
+      window.open('https://calendly.com/your-calendly-link', '_blank');
+    }
+  };
+
   return (
-    <section id="contact" className="py-24 md:py-32 border-t border-border relative">
-      <GridBackground />
-      <div className="container relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto text-center"
-        >
-          <span className="text-accent text-xs font-medium uppercase tracking-[0.3em]">
-            Let's Talk
-          </span>
-          <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] uppercase">
-            Ready to transform your digital presence?
-          </h2>
-          <p className="mt-6 text-muted-foreground text-lg max-w-xl mx-auto">
-            Whether you're launching a new brand or scaling an existing one, 
-            we're here to help you achieve your goals.
-          </p>
-          
-          <div className="mt-10 flex flex-wrap gap-4 justify-center">
-            <a
-              href="mailto:hello@magadh.studio"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
-            >
-              Start a project
-              <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
-            </a>
-            <a
-              href="mailto:hello@magadh.studio"
-              className="inline-flex items-center gap-3 px-8 py-4 border border-border text-sm font-medium hover:bg-secondary transition-colors"
-            >
-              Schedule a call
-              <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
-            </a>
-          </div>
-        </motion.div>
+    <section id="contact" className="container">
+      <div className="relative border-x-0">
+        <GridBackground />
+        <div className="relative min-h-[500px] lg:h-[600px] flex flex-col justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="md:container z-[1]"
+          >
+            <div className="px-4">
+              <div>
+                <h2 className="font-sans xl:text-[5rem] lg:text-6xl md:text-[2.8rem] sm:text-5xl text-4xl font-bold leading-[1.1] tracking-tight text-foreground pointer-events-none uppercase select-none text-balance">
+                  Ready to transform your
+                </h2>
+                <h2 className="font-sans xl:text-[5rem] lg:text-6xl md:text-[2.8rem] sm:text-5xl text-4xl font-bold leading-[1.1] tracking-tight text-foreground pointer-events-none uppercase select-none text-balance">
+                  <span className="md:text-right md:block">digital presence?</span>
+                </h2>
+              </div>
+            </div>
+
+            <div className="mt-6 px-4">
+              <div className="inline-grid sm:w-fit sm:grid-cols-[max-content_max-content] w-full grid-cols-1 gap-4 mt-6">
+                <button
+                  onClick={handleScheduleCall}
+                  className="group flex items-center justify-between gap-2 border border-border hover:border-muted-foreground transition-colors px-6 py-3 backdrop-blur-[2px] bg-foreground text-background relative"
+                >
+                  Schedule a call
+                  <ArrowIcon inverted />
+                </button>
+                <a
+                  href="mailto:hello@magadh.studio"
+                  className="group flex items-center justify-between gap-2 border border-border hover:border-muted-foreground backdrop-blur-[2px] transition-colors px-6 py-3 bg-transparent"
+                >
+                  Start a project
+                  <ArrowIcon />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
