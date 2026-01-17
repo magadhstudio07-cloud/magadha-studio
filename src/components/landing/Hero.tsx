@@ -39,8 +39,8 @@ const Hero = () => {
   };
 
   return (
-    <section className="container">
-      <div className="relative border-x-0">
+    <section className="container pt-20">
+      <div className="relative border-x border-border">
         <GridBackground />
         <div className="relative min-h-[600px] lg:h-[700px] flex flex-col justify-center">
           <motion.div

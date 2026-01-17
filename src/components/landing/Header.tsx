@@ -26,6 +26,11 @@ const Header = () => {
       transition={{ duration: 0.5 }}
       className="fixed top-0 left-0 right-0 z-50 bg-background"
     >
+      {/* Top border section */}
+      <section className="container">
+        <div className="border-x border-border relative h-4"></div>
+      </section>
+      
       <section className="container">
         <div className="border-x border-border relative h-16">
           <nav className="relative h-full flex justify-between">
