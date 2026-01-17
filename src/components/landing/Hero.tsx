@@ -40,23 +40,25 @@ const Hero = () => {
 
   return (
     <section className="container">
-      <div className="relative border-x border-border">
+      <div className="border-border relative border-x-0">
         <GridBackground />
         <div className="relative min-h-[600px] lg:h-[700px] flex flex-col justify-center">
           <motion.div initial="hidden" animate="visible" variants={containerVariants} className="md:container z-[1]">
             <div className="px-4">
-              <motion.h1
-                variants={itemVariants}
-                className="font-sans xl:text-[5rem] lg:text-6xl md:text-[2.8rem] sm:text-5xl text-4xl font-bold leading-[1.1] tracking-tight text-foreground pointer-events-none uppercase select-none text-balance"
-              >
-                We craft digital experiences
-              </motion.h1>
-              <motion.h1
-                variants={itemVariants}
-                className="font-sans xl:text-[5rem] lg:text-6xl md:text-[2.8rem] sm:text-5xl text-4xl font-bold leading-[1.1] tracking-tight text-foreground pointer-events-none uppercase select-none text-balance"
-              >
-                <span className="md:text-right md:block">that drive growth</span>
-              </motion.h1>
+              <div>
+                <motion.h1
+                  variants={itemVariants}
+                  className="font-sans xl:text-[5rem] lg:text-6xl md:text-[2.8rem] sm:text-5xl text-5xl font-bold leading-[1.1] tracking-tight text-foreground pointer-events-none uppercase select-none text-balance"
+                >
+                  We build the best editorial
+                </motion.h1>
+                <motion.h1
+                  variants={itemVariants}
+                  className="font-sans xl:text-[5rem] lg:text-6xl md:text-[2.8rem] sm:text-5xl text-5xl font-bold leading-[1.1] tracking-tight text-foreground pointer-events-none uppercase select-none text-balance"
+                >
+                  <span className="md:text-right md:block">experiences on the web</span>
+                </motion.h1>
+              </div>
             </div>
 
             <div className="mt-6 px-4">
@@ -68,7 +70,7 @@ const Hero = () => {
                   href="#contact"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="group flex items-center justify-between gap-2 border border-border hover:border-muted-foreground transition-colors px-6 py-3 backdrop-blur-[2px] bg-foreground text-background relative"
+                  className="group selection:bg-muted selection:!text-foreground flex items-center justify-between gap-2 border border-border hover:border-muted-foreground transition-colors px-6 py-3 backdrop-blur-[2px] bg-foreground text-background relative"
                 >
                   Book a meeting
                   <ArrowIcon inverted />
