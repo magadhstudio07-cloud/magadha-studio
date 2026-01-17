@@ -1,39 +1,50 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import GridBackground from "./GridBackground";
+import ArrowIcon from "./ArrowIcon";
 
 const Hero = () => {
   return (
-    <section className="pt-14 min-h-screen flex items-center justify-center relative">
-      <GridBackground />
-      <div className="container py-24 md:py-32 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-5xl mx-auto"
-        >
-          <h1 className="text-4xl md:text-6xl lg:text-[5.5rem] font-bold tracking-tight leading-[1.05] uppercase">
-            We craft digital experiences that drive growth
-          </h1>
+    <section className="container">
+      <div className="relative border-x-0">
+        <GridBackground />
+        <div className="relative min-h-[600px] lg:h-[700px] flex flex-col justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="md:container z-[1]"
+          >
+            <div className="px-4">
+              <div>
+                <h1 className="font-sans xl:text-[5rem] lg:text-6xl md:text-[2.8rem] sm:text-5xl text-4xl font-bold leading-[1.1] tracking-tight text-foreground pointer-events-none uppercase select-none text-balance">
+                  We craft digital experiences
+                </h1>
+                <h1 className="font-sans xl:text-[5rem] lg:text-6xl md:text-[2.8rem] sm:text-5xl text-4xl font-bold leading-[1.1] tracking-tight text-foreground pointer-events-none uppercase select-none text-balance">
+                  <span className="md:text-right md:block">that drive growth</span>
+                </h1>
+              </div>
+            </div>
 
-          <div className="mt-12 flex flex-wrap gap-4 justify-center">
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
-            >
-              Book a meeting
-              <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
-            </a>
-            <a
-              href="#work"
-              className="inline-flex items-center gap-3 px-8 py-4 border border-border text-sm font-medium hover:bg-secondary transition-colors"
-            >
-              View our work
-              <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
-            </a>
-          </div>
-        </motion.div>
+            <div className="mt-6 px-4">
+              <div className="inline-grid sm:w-fit sm:grid-cols-[max-content_max-content] w-full grid-cols-1 gap-4 mt-6">
+                <a
+                  href="#contact"
+                  className="group flex items-center justify-between gap-2 border border-border hover:border-muted-foreground transition-colors px-6 py-3 backdrop-blur-[2px] bg-foreground text-background relative"
+                >
+                  Book a meeting
+                  <ArrowIcon inverted />
+                </a>
+                <a
+                  href="#work"
+                  className="group flex items-center justify-between gap-2 border border-border hover:border-muted-foreground backdrop-blur-[2px] transition-colors px-6 py-3 bg-transparent"
+                >
+                  View our work
+                  <ArrowIcon />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
