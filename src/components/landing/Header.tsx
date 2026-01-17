@@ -13,7 +13,7 @@ const Header = () => {
       <section className="container bg-background/90 backdrop-blur-sm">
         <div className="border-x border-border relative h-4"></div>
       </section>
-      <div className="bg-background/90 backdrop-blur-sm border-b border-border">
+      <div className="bg-background/90 backdrop-blur-sm border-b border-t border-border">
         <div className="container flex items-center h-14">
           {/* Logo */}
           <a href="/" className="text-sm font-bold tracking-[0.2em] uppercase border-r border-border pr-6 mr-6">
