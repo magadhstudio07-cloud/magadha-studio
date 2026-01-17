@@ -9,6 +9,7 @@ import Stats from "@/components/landing/Stats";
 import Newsletter from "@/components/landing/Newsletter";
 import CTA from "@/components/landing/CTA";
 import Footer from "@/components/landing/Footer";
+import SEO from "@/components/SEO";
 
 const Index = () => {
   // Set dark mode as default on mount
@@ -22,20 +23,23 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main>
-        <Hero />
-        <Clients />
-        <Services />
-        <FeaturedProjects />
-        <Testimonials />
-        <Stats />
-        <Newsletter />
-        <CTA />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <SEO />
+      <div className="min-h-screen">
+        <Header />
+        <main>
+          <Hero />
+          <Clients />
+          <Services />
+          <FeaturedProjects />
+          <Testimonials />
+          <Stats />
+          <Newsletter />
+          <CTA />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 

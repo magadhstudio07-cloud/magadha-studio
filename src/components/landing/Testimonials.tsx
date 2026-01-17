@@ -43,36 +43,80 @@ const testimonials = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut" as const,
+    },
+  },
+};
+
 const Testimonials = () => {
   return (
-    <section className="container" id="testimonials">
+    <section className="container" id="testimonials" aria-labelledby="testimonials-heading">
       <div className="border-x border-border relative">
         {/* Section header */}
-        <div className="w-full border-y border-border py-6 -my-px">
-          <h2 className="text-center font-mono text-[10px] tracking-[2px] text-muted-foreground uppercase">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="w-full border-y border-border py-6 -my-px"
+        >
+          <h2 id="testimonials-heading" className="text-center font-mono text-[10px] tracking-[2px] text-muted-foreground uppercase">
             What our clients say
           </h2>
-        </div>
+        </motion.div>
 
         {/* Testimonials grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={containerVariants}
+          className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border"
+        >
           {testimonials.map((testimonial, index) => (
-            <motion.div
+            <motion.article
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
-              className={`p-8 lg:p-12 ${index >= 2 ? "border-t border-border" : ""}`}
+              variants={itemVariants}
+              whileHover={{ backgroundColor: "hsl(var(--secondary) / 0.2)" }}
+              className={`p-8 lg:p-12 transition-colors ${index >= 2 ? "border-t border-border" : ""}`}
             >
               <blockquote className="space-y-6">
-                <p className="text-foreground text-base lg:text-lg leading-relaxed">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="text-foreground text-base lg:text-lg leading-relaxed"
+                >
                   "{testimonial.quote}"
-                </p>
+                </motion.p>
                 <footer className="flex items-center gap-4">
-                  <div className="size-12 rounded-full bg-muted flex items-center justify-center text-muted-foreground font-medium">
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.3, type: "spring" }}
+                    className="size-12 rounded-full bg-muted flex items-center justify-center text-muted-foreground font-medium"
+                  >
                     {testimonial.name.charAt(0)}
-                  </div>
+                  </motion.div>
                   <div>
                     <cite className="not-italic font-medium text-foreground block">
                       {testimonial.name}
@@ -83,9 +127,9 @@ const Testimonials = () => {
                   </div>
                 </footer>
               </blockquote>
-            </motion.div>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
