@@ -24,9 +24,6 @@ const Header = () => {
           <a href="#services" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
             Services
           </a>
-          <a href="#process" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
-            Blog
-          </a>
         </nav>
 
         {/* Right side */}

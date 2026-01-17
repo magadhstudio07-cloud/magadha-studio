@@ -16,24 +16,38 @@ const Footer = () => {
               MAGADH<span className="font-normal tracking-normal ml-1 text-muted-foreground">STUDIO</span>
             </a>
             <p className="mt-4 text-sm text-muted-foreground max-w-sm leading-relaxed">
-              A frontend studio that builds fast, scalable, and user-focused 
-              web experiences for startups and growing teams.
+              A full-service digital agency crafting exceptional brand experiences 
+              and high-performance web solutions for ambitious businesses.
             </p>
           </div>
 
           <div>
-            <h4 className="text-xs font-medium uppercase tracking-wider mb-4">Contact</h4>
-            <a
-              href="mailto:hello@magadh.studio"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              hello@magadh.studio
-            </a>
+            <h4 className="text-xs font-medium uppercase tracking-wider mb-4">Services</h4>
+            <div className="flex flex-col gap-2">
+              <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Web Development
+              </a>
+              <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Branding & Identity
+              </a>
+              <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                UI/UX Design
+              </a>
+              <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Digital Strategy
+              </a>
+            </div>
           </div>
 
           <div>
             <h4 className="text-xs font-medium uppercase tracking-wider mb-4">Connect</h4>
             <div className="flex flex-col gap-2">
+              <a
+                href="mailto:hello@magadh.studio"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                hello@magadh.studio
+              </a>
               <a
                 href="#"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -50,7 +64,7 @@ const Footer = () => {
                 href="#"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                GitHub
+                Instagram
               </a>
             </div>
           </div>
@@ -62,10 +76,10 @@ const Footer = () => {
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-              Privacy
+              Privacy Policy
             </a>
             <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-              Terms
+              Terms of Service
             </a>
           </div>
         </div>
