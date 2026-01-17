@@ -50,13 +50,13 @@ const Hero = () => {
                   variants={itemVariants}
                   className="font-sans xl:text-[5rem] lg:text-6xl md:text-[2.8rem] sm:text-5xl text-5xl font-bold leading-[1.1] tracking-tight text-foreground pointer-events-none uppercase select-none text-balance"
                 >
-                  We build the best editorial
+                  Helping startups build
                 </motion.h1>
                 <motion.h1
                   variants={itemVariants}
                   className="font-sans xl:text-[5rem] lg:text-6xl md:text-[2.8rem] sm:text-5xl text-5xl font-bold leading-[1.1] tracking-tight text-foreground pointer-events-none uppercase select-none text-balance"
                 >
-                  <span className="md:text-right md:block">experiences on the web</span>
+                  <span className="md:text-right md:block">modern editorial web platforms.</span>
                 </motion.h1>
               </div>
             </div>
