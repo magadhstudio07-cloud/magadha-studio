@@ -4,7 +4,11 @@ import ThemeToggle from "@/components/ThemeToggle";
 
 const Header = () => {
   return (
-    <motion.header
+    <>
+      <section className="container fixed top-0 left-0 right-0 z-50">
+        <div className="border-x border-border relative h-4"></div>
+      </section>
+      <motion.header
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -41,7 +45,8 @@ const Header = () => {
           </a>
         </div>
       </div>
-    </motion.header>
+      </motion.header>
+    </>
   );
 };
 
