@@ -4,30 +4,52 @@ import GridBackground from "./GridBackground";
 
 const services = [
   {
-    icon: "F",
-    title: "Frontend Development",
-    description: "From the latest in React Server Components to tried and tested patterns that help you scale your website, we don't do half measures.",
+    icon: "W",
+    title: "Web Development",
+    description: "Custom websites and web applications built with modern technologies. From landing pages to complex platforms, we deliver fast, scalable solutions.",
+  },
+  {
+    icon: "B",
+    title: "Branding & Identity",
+    description: "Strategic brand development that captures your essence. Logo design, visual systems, and brand guidelines that make you stand out.",
   },
   {
     icon: "U",
-    title: "UI Implementation",
-    description: "Pixel-perfect translation of designs into responsive, accessible interfaces with cutting-edge development.",
+    title: "UI/UX Design",
+    description: "User-centered design that converts. We create intuitive interfaces and seamless experiences that delight your customers.",
   },
   {
-    icon: "A",
-    title: "API Integration",
-    description: "Seamless connection to backends, third-party services, and data sources with structure that scales.",
-  },
-  {
-    icon: "P",
-    title: "Performance Optimization",
-    description: "Core Web Vitals improvements, bundle optimization, and speed enhancements.",
+    icon: "D",
+    title: "Digital Strategy",
+    description: "Data-driven strategies to grow your digital presence. SEO, analytics, and conversion optimization to maximize your ROI.",
   },
 ];
 
 const Services = () => {
   return (
     <section id="services" className="border-t border-border">
+      {/* Intro text */}
+      <div className="container py-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="max-w-2xl"
+        >
+          <span className="text-accent text-xs font-medium uppercase tracking-[0.3em]">
+            What We Do
+          </span>
+          <h2 className="mt-4 text-3xl md:text-4xl font-bold tracking-tight uppercase">
+            Full-service digital agency
+          </h2>
+          <p className="mt-6 text-muted-foreground leading-relaxed">
+            We help ambitious brands transform their digital presence. From strategy to execution, 
+            we deliver end-to-end solutions that drive real business results.
+          </p>
+        </motion.div>
+      </div>
+
       {/* Services grid */}
       <div className="grid md:grid-cols-2">
         {services.map((service, index) => (
@@ -62,7 +84,7 @@ const Services = () => {
                 href="#contact" 
                 className="inline-flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                View service
+                Learn more
                 <span className="w-6 h-6 rounded-full border border-border flex items-center justify-center group-hover:border-foreground transition-colors">
                   <ArrowUpRight className="h-3 w-3" />
                 </span>
