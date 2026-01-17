@@ -16,33 +16,35 @@ const Header = () => {
       <div className="bg-background/90 backdrop-blur-sm border-b border-t border-border">
         <div className="container flex items-center h-14">
           {/* Logo */}
-          <a href="/" className="text-sm font-bold tracking-[0.2em] uppercase border-r border-border pr-6 mr-6">
-            MAGADH<span className="font-normal tracking-normal ml-1 text-muted-foreground">STUDIO</span>
-          </a>
+          <div className="border-border border-l border-r">
+            <a href="/" className="text-sm font-bold tracking-[0.2em] uppercase border-r border-border pr-6 mr-6">
+              MAGADH<span className="font-normal tracking-normal ml-1 text-muted-foreground">STUDIO</span>
+            </a>
 
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-8 flex-1">
-            <a href="#work" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
-              Case Studies
-            </a>
-            <a href="#services" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
-              Services
-            </a>
-            <a href="#process" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
-              Blog
-            </a>
-          </nav>
+            {/* Navigation */}
+            <nav className="hidden md:flex items-center gap-8 flex-1">
+              <a href="#work" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
+                Case Studies
+              </a>
+              <a href="#services" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
+                Services
+              </a>
+              <a href="#process" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
+                Blog
+              </a>
+            </nav>
 
-          {/* Right side */}
-          <div className="flex items-center gap-4 ml-auto">
-            <ThemeToggle />
-            <a
-              href="#contact"
-              className="flex items-center gap-2 text-sm font-medium hover:opacity-70 transition-opacity"
-            >
-              Get in touch
-              <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
-            </a>
+            {/* Right side */}
+            <div className="flex items-center gap-4 ml-auto">
+              <ThemeToggle />
+              <a
+                href="#contact"
+                className="flex items-center gap-2 text-sm font-medium hover:opacity-70 transition-opacity"
+              >
+                Get in touch
+                <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
