@@ -1,7 +1,7 @@
 const ArrowIcon = ({ inverted = false }: { inverted?: boolean }) => {
   const bgClass = inverted 
-    ? "bg-background dark:bg-foreground" 
-    : "bg-foreground dark:bg-background";
+    ? "bg-zinc-50 dark:bg-zinc-900" 
+    : "bg-zinc-900 dark:bg-zinc-50";
   
   return (
     <div className="group relative h-4 w-4 overflow-hidden">
