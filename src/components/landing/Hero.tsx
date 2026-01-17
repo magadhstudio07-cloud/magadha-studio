@@ -39,16 +39,11 @@ const Hero = () => {
   };
 
   return (
-    <section className="container pt-20">
+    <section className="container">
       <div className="relative border-x border-border">
         <GridBackground />
         <div className="relative min-h-[600px] lg:h-[700px] flex flex-col justify-center">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={containerVariants}
-            className="md:container z-[1]"
-          >
+          <motion.div initial="hidden" animate="visible" variants={containerVariants} className="md:container z-[1]">
             <div className="px-4">
               <motion.h1
                 variants={itemVariants}
