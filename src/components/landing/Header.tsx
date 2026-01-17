@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ChevronDown, Menu } from "lucide-react";
-import ThemeToggle from "@/components/ThemeToggle";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -34,10 +33,18 @@ const Header = () => {
       {/* Screen reader navigation */}
       <nav aria-label="Primary Hidden Navigation" className="sr-only">
         <ul>
-          <li><a href="#work">Case Studies</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#process">Blog</a></li>
-          <li><a href="#contact">Get in touch</a></li>
+          <li>
+            <a href="#work">Case Studies</a>
+          </li>
+          <li>
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            <a href="#process">Blog</a>
+          </li>
+          <li>
+            <a href="#contact">Get in touch</a>
+          </li>
         </ul>
       </nav>
 
@@ -134,16 +141,10 @@ const Header = () => {
               </a>
 
               {/* Theme toggle - visible on desktop */}
-              <div className="hidden lg:flex items-center border-s border-border px-4">
-                <ThemeToggle />
-              </div>
             </div>
 
             {/* Mobile menu */}
             <div className="lg:hidden flex items-center justify-end h-full">
-              <div className="flex items-center gap-2 px-4">
-                <ThemeToggle />
-              </div>
               <Sheet>
                 <SheetTrigger asChild>
                   <button
@@ -156,10 +157,7 @@ const Header = () => {
                 </SheetTrigger>
                 <SheetContent side="right" className="w-full sm:w-[400px]">
                   <nav className="flex flex-col gap-4 mt-8">
-                    <a
-                      href="#work"
-                      className="text-lg font-medium py-2 hover:text-muted-foreground transition-colors"
-                    >
+                    <a href="#work" className="text-lg font-medium py-2 hover:text-muted-foreground transition-colors">
                       Case Studies
                     </a>
                     <a
