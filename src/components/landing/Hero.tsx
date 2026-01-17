@@ -48,15 +48,15 @@ const Hero = () => {
               <div>
                 <motion.h1
                   variants={itemVariants}
-                  className="font-sans xl:text-[5rem] lg:text-6xl md:text-[2.8rem] sm:text-5xl text-5xl font-bold leading-[1.1] tracking-tight text-foreground pointer-events-none uppercase select-none text-balance"
+                  className="font-sans xl:text-[4rem] lg:text-6xl md:text-[2.8rem] sm:text-5xl text-5xl font-bold leading-[1.1] tracking-tight text-foreground pointer-events-none uppercase select-none text-balance"
                 >
-                  Helping startups build
+                  We build the best editorial
                 </motion.h1>
                 <motion.h1
                   variants={itemVariants}
                   className="font-sans xl:text-[5rem] lg:text-6xl md:text-[2.8rem] sm:text-5xl text-5xl font-bold leading-[1.1] tracking-tight text-foreground pointer-events-none uppercase select-none text-balance"
                 >
-                  <span className="md:text-right md:block">modern editorial web platforms.</span>
+                  <span className="md:text-right md:block">experiences on the web</span>
                 </motion.h1>
               </div>
             </div>
