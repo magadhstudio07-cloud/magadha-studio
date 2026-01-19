@@ -12,19 +12,19 @@ interface SEOProps {
 }
 
 const SEO = ({
-  title = "magadh.studio | Frontend & Web Experience Studio",
+  title = "Magadh Studio | Frontend & Web Experience Studio",
   description = "We craft digital experiences that drive growth. Custom web development, UI/UX design, and digital strategy for ambitious brands. Based in India, working globally.",
   keywords = "web development, frontend development, UI/UX design, digital agency, web design, React, Next.js, TypeScript, web experience studio, digital transformation, website development India",
   image = "/og-image.png",
   url = "https://magadh.studio",
   type = "website",
-  author = "magadh.studio",
+  author = "Magadh Studio",
   twitterHandle = "@magadhstudio",
 }: SEOProps) => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "magadh.studio",
+    name: "Magadh Studio",
     description: description,
     url: url,
     logo: `${url}/logo.png`,
@@ -93,13 +93,13 @@ const SEO = ({
   const organizationData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "magadh.studio",
+    name: "Magadh Studio",
     url: url,
     logo: `${url}/logo.png`,
     description: description,
     founder: {
       "@type": "Person",
-      name: "magadh.studio Team",
+      name: "Magadh Studio Team",
     },
     foundingDate: "2020",
     numberOfEmployees: {
@@ -112,7 +112,7 @@ const SEO = ({
   const websiteData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "magadh.studio",
+    name: "Magadh Studio",
     url: url,
     potentialAction: {
       "@type": "SearchAction",
@@ -132,7 +132,7 @@ const SEO = ({
       <meta name="robots" content="index, follow" />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />
-      
+
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
 
@@ -168,15 +168,9 @@ const SEO = ({
       <meta name="geo.placename" content="Patna" />
 
       {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
-      <script type="application/ld+json">
-        {JSON.stringify(organizationData)}
-      </script>
-      <script type="application/ld+json">
-        {JSON.stringify(websiteData)}
-      </script>
+      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      <script type="application/ld+json">{JSON.stringify(organizationData)}</script>
+      <script type="application/ld+json">{JSON.stringify(websiteData)}</script>
     </Helmet>
   );
 };
