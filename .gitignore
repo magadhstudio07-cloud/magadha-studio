@@ -12,6 +12,8 @@
 
 # testing
 /coverage
+/.claude
+/claude.md
 
 # next.js
 /.next/
