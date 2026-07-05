@@ -66,7 +66,7 @@ const Header = () => {
                 className="h-full items-center px-4 inline-flex group transition-colors lg:hover:bg-primary/5"
               >
                 <span className="text-sm font-bold tracking-[0.2em] uppercase">
-                  MAGADH<span className="font-normal tracking-normal ml-1 text-muted-foreground">STUDIO</span>
+                  MAGADHA<span className="font-normal tracking-normal ml-1 text-muted-foreground">STUDIO</span>
                 </span>
               </a>
             </div>
@@ -81,6 +81,15 @@ const Header = () => {
                       className="h-full flex items-center px-5 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
                     >
                       Case Studies
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+
+                  <NavigationMenuItem className="flex h-16">
+                    <NavigationMenuLink
+                      href="/team"
+                      className="h-full flex items-center px-5 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+                    >
+                      Team
                     </NavigationMenuLink>
                   </NavigationMenuItem>
 
@@ -172,28 +181,28 @@ const Header = () => {
                     >
                       Blog
                     </a>
-                    <a
-                      href="#contact"
-                      className="text-lg font-medium py-2 hover:text-muted-foreground transition-colors"
-                    >
-                      Get in touch
-                    </a>
-                  </nav>
-                </SheetContent>
-              </Sheet>
-            </div>
-          </nav>
-        </div>
-      </section>
+                  <a
+                    href="#contact"
+                    className="text-lg font-medium py-2 hover:text-muted-foreground transition-colors"
+                  >
+                    Get in touch
+                  </a>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </nav>
+      </div>
+    </section>
 
-      <hr className="border-border" />
+    <hr className="border-border" />
 
-      {/* Bottom border section */}
-      <section className="container">
-        <div className="border-x border-border relative h-0" />
-      </section>
-    </motion.header>
-  );
+    {/* Bottom border section */}
+    <section className="container">
+      <div className="border-x border-border relative h-0" />
+    </section>
+  </motion.header>
+);
 };
 
 export default Header;
