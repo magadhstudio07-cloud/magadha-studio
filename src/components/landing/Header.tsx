@@ -85,6 +85,15 @@ const Header = () => {
                   </NavigationMenuItem>
 
                   <NavigationMenuItem className="flex h-16">
+                    <NavigationMenuLink
+                      href="/team"
+                      className="h-full flex items-center px-5 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+                    >
+                      Team
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+
+                  <NavigationMenuItem className="flex h-16">
                     <NavigationMenuTrigger className="h-full rounded-none bg-background px-5 text-sm font-medium hover:bg-accent hover:text-accent-foreground data-[state=open]:bg-accent/50">
                       Services
                     </NavigationMenuTrigger>
