@@ -17,15 +17,15 @@ const Footer = () => {
         <div className="border-x border-border relative border-t">
           <div className="py-12 px-4">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-              {/* Magadh Studio */}
+              {/* Magadha Studio */}
               <div>
                 <h3 className="text-xs text-muted-foreground uppercase tracking-wider mb-6 font-mono">
-                  Magadh Studio
+                  Magadha Studio
                 </h3>
                 <ul className="space-y-4">
                   <li>
                     <a 
-                      href="#" 
+                      href="/team" 
                       className="hover:text-muted-foreground transition-colors"
                     >
                       Team
