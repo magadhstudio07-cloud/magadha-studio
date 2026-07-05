@@ -181,28 +181,28 @@ const Header = () => {
                     >
                       Blog
                     </a>
-                    <a
-                      href="#contact"
-                      className="text-lg font-medium py-2 hover:text-muted-foreground transition-colors"
-                    >
-                      Get in touch
-                    </a>
-                  </nav>
-                </SheetContent>
-              </Sheet>
-            </div>
-          </nav>
-        </div>
-      </section>
+                  <a
+                    href="#contact"
+                    className="text-lg font-medium py-2 hover:text-muted-foreground transition-colors"
+                  >
+                    Get in touch
+                  </a>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </nav>
+      </div>
+    </section>
 
-      <hr className="border-border" />
+    <hr className="border-border" />
 
-      {/* Bottom border section */}
-      <section className="container">
-        <div className="border-x border-border relative h-0" />
-      </section>
-    </motion.header>
-  );
+    {/* Bottom border section */}
+    <section className="container">
+      <div className="border-x border-border relative h-0" />
+    </section>
+  </motion.header>
+);
 };
 
 export default Header;
