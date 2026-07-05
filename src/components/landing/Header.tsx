@@ -66,7 +66,7 @@ const Header = () => {
                 className="h-full items-center px-4 inline-flex group transition-colors lg:hover:bg-primary/5"
               >
                 <span className="text-sm font-bold tracking-[0.2em] uppercase">
-                  MAGADH<span className="font-normal tracking-normal ml-1 text-muted-foreground">STUDIO</span>
+                  MAGADHA<span className="font-normal tracking-normal ml-1 text-muted-foreground">STUDIO</span>
                 </span>
               </a>
             </div>
